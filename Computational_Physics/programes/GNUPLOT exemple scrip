@@ -1,0 +1,31 @@
+set term png
+set output 'P1-fig1.png'
+
+set xrange[11:311]
+
+set grid
+set key top left
+set logscale y
+
+set xlabel 'N'
+set ylabel 'S_N^8'
+
+plot 'P1-res1.dat' u 1:2 w p pt 2 ps 0.7 t 'S_N^8', 'P1-res1.dat' u 1:3 w l lw 1.5 t 'S_N^{asmi}
+
+set output
+
+reset
+
+set output 'P1-fig2.png'
+
+set grid
+
+set xrange[11:311]
+
+set xlabel 'N'
+set ylabel 'S_N^8/S_N^{asim}'
+
+plot 'P1-res1.dat' u 1:4 w p pt 2 ps 0.7 t 'S_N^8/S_N^{asim}'
+
+set output
+
