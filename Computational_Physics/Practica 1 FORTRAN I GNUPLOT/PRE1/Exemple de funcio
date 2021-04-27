@@ -1,0 +1,14 @@
+      integer function P(n)
+      integer n,i,P0,P1
+	P0=1
+	P1=1
+
+	do i=2,n
+	 P=P0+P1
+	 P0=P1
+	 P1=P
+	enddo
+
+	 if(n.eq.0) P=1
+	 if(n.eq.1) P=1
+
